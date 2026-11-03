@@ -1,0 +1,83 @@
+ZAPS · MVP · DISEÑO DE LAU · VERSIÓN MÓVIL + WEB RESPONSIVE
+==========================================================
+
+ABRIR EN TU ORDENADOR (SIN INSTALAR NADA)
+1. Extrae ZAPS_MVP_FIGMA.zip completamente.
+2. Entra en la carpeta zaps_web.
+3. Haz doble clic en index.html y ábrelo en Chrome o Edge.
+4. Para ver la versión móvil en ordenador: F12 > icono de móvil > ancho 390 px.
+
+IMPORTANTE: abre el index.html de la carpeta EXTRAÍDA, no el del visor del ZIP.
+
+CUENTA DE USUARIO LOCAL
+- Al entrar verás Iniciar sesión / Crear cuenta.
+- Puedes crear una cuenta con nombre, correo y contraseña de al menos 8 caracteres.
+- Luego podrás cerrar sesión en Perfil e iniciar sesión con esa cuenta.
+- Las cuentas son LOCALES al navegador: no son cuentas online reales.
+- No introduzcas una contraseña que uses en otros servicios.
+- Esta demo NO incluye servidor ni seguridad suficiente para cuentas públicas.
+- Las colecciones se almacenan separadas para cada usuario local.
+- Sin sincronización entre equipos; borrar almacenamiento del navegador elimina los datos.
+
+FUNCIONALIDADES
+- Dashboard con estadísticas vinculadas a tus registros reales.
+- Explorar catálogo provisional de 8 zapatillas con imágenes placeholder.
+- Buscar y filtrar por marca, año y rareza.
+- Detalle de cada zapatilla.
+- Añadir zapatillas a Mi colección o Wishlist.
+- Editar y eliminar registros con confirmación.
+- Validación de formulario y mensajes de acción.
+- Persistencia con localStorage tras cerrar o recargar la página.
+- Diseño mobile-first. En desktop ocupa la pantalla completa con sidebar.
+
+ARCHIVOS
+- index.html: estructura de la app y pantalla de acceso.
+- styles.css: diseño y adaptación responsive.
+- script.js: catálogo de demostración y lógica CRUD, sesión y persistencia.
+- assets/zaps-logo.png: logo de ZAPS recortado de las capturas enviadas.
+
+FUTURO
+Reemplazar catálogo de ejemplo, placeholders y autenticación local por
+base de datos, almacenamiento de fotos y sistema de usuarios en servidor.
+
+PANTALLA DE BIENVENIDA Y RECUPERACIÓN DE CONTRASEÑA
+- Los botones «Iniciar sesión» y «Registrarse» abren sus formularios.
+- «¿Has olvidado tu contraseña?» abre el formulario de recuperación.
+- IMPORTANTE: una web que solo usa archivos locales no puede enviar correos reales.
+- Sin configuración externa, la recuperación explica claramente esa limitación.
+
+ACTIVAR EMAIL REAL CON SUPABASE (OPCIONAL)
+1. Crea un proyecto en https://supabase.com y habilita Email en Authentication > Providers.
+2. En Authentication > Email Templates > Reset Password cambia la plantilla
+   para mostrar el token OTP, por ejemplo: Tu código ZAPS es: {{ .Token }}
+   (el formulario de ZAPS solicita ese código, no un enlace).
+3. Abre config.js y pega la Project URL y la clave PÚBLICA anon/publishable.
+   Nunca introduzcas claves privadas o service_role en este archivo.
+4. Aloja los archivos en HTTPS para el uso público; no distribuyas la clave
+   secreta ni publiques datos privados. Configura Auth y límites de email.
+5. Regístrate con correo, confirma la cuenta si Supabase lo exige y
+   utiliza «¿Has olvidado tu contraseña?» para recibir el código por email.
+6. La colección de zapatillas sigue siendo local en este MVP; para
+   sincronizarla entre dispositivos hay que conectar una base de datos.
+
+ANIMACIONES
+- Hover, pulsación, cambios de pantalla, navegación, modales y mensajes toast.
+- Se respeta «reducir movimiento» configurado en el sistema operativo.
+
+
+ACTUALIZACIÓN CATÁLOGO (20 ZAPATILLAS)
+------------------------------------
+La app incorpora 20 zapatillas del documento Base de datos ZAPS.pdf.
+Se incluye catalogo.json y catalogo.csv como referencia. Para abrir con doble clic,
+los datos están integrados directamente en script.js, porque los navegadores
+restringen fetch() de archivos JSON locales.
+Imagen de logo: assets/zaps-logo.png, generada a partir de la foto original
+proporcionada por Lau.
+Las fotos de zapatillas proceden de URL externas. Requieren internet y algunas
+webs pueden bloquearlas, caducar o no devolver una imagen válida; en esos casos
+se muestra automáticamente un placeholder. Si quieres fiabilidad total, guarda
+las imágenes en una carpeta local y actualiza sus rutas en el catálogo.
+El PDF de origen recorta algunas URLs por el ancho de la página, por eso se usaron
+los enlaces completos del Excel original que corresponde al mismo catálogo.
+Registro en modo local: las cuentas no son seguras para producción y no hay envío
+de correos de recuperación real salvo configuración de Supabase.
