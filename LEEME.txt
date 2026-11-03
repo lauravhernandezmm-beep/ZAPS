@@ -1,15 +1,9 @@
-ZAPS — ENTREGA DEMO LOCAL
+ZAPS DEMO - ACCESO INVITADO DIRECTO
 
 1. Extrae este ZIP.
-2. Abre index.html para probar desde un navegador.
-3. Para actualizar GitHub Pages, SUBE LOS ARCHIVOS DE ESTA CARPETA al directorio raiz de tu repositorio ZAPS (no el ZIP ni una carpeta extra). Confirma el commit y recarga la pagina con Ctrl+Shift+R.
+2. Sube TODOS los archivos, NO el ZIP, a la raiz del repositorio ZAPS.
+3. Abre https://lauravhernandezmm-beep.github.io/ZAPS/ y recarga con Ctrl+Shift+R.
+4. Pulsa Entrar como invitado: accede al Dashboard SIN correo ni contrasena.
+5. Los datos del invitado se almacenan de forma local en ese navegador si lo permite.
 
-REGISTRO: introduce nombre, correo y contraseña de prueba (minimo 8 caracteres). Luego entra a la app.
-INICIO DE SESION: utiliza la misma cuenta demo desde el mismo navegador.
-RECUPERACION: esta pantalla permite cambiar la contraseña demo introduciendo el correo y una nueva contraseña. NO ENVIA CORREOS. Este mecanismo no es seguro ni apto para usuarios reales.
-COLECCION/WISHLIST: crear, consultar, editar y eliminar; datos guardados en localStorage por correo para el mismo navegador.
-CATALOGO: 20 zapatillas precargadas; imagenes alojadas en webs de terceros pueden no aparecer sin internet.
-
-IMPORTANTE: no uses contraseñas de otros servicios ni datos reales. Esta entrega es un prototipo funcional exclusivamente educativo, sin autenticacion ni base de datos externas.
-
-MODO INVITADO: pulsa “Entrar como invitado” sin escribir datos. Puedes usar todas las funciones de la app. Sus registros son locales, separados de los de las cuentas demo, y permanecen tras recargar en el mismo navegador. Para volver a la portada, abre Perfil > Cerrar sesión.
+IMPORTANTE: este proyecto NO requiere Supabase ni envia emails. El registro es una demostracion local.
