@@ -242,3 +242,31 @@ button:focus-visible,a:focus-visible,[tabindex]:focus-visible { outline:2px soli
   .page:has(.detail-header) > .detail-header strong{position:absolute;left:50%;transform:translateX(-50%);white-space:nowrap;}
   .page:has(.detail-header) > .detail-header .icon-btn:last-child{margin-left:auto;}
 }
+
+
+/* ZAPS · Corrección de formularios en iPhone/WhatsApp/Safari (03-11-2026) */
+html,body{max-width:100%;overflow-x:clip}
+.app-shell,.app-body,.page,.form-panel,.form-grid,.field,#purchaseFields{min-width:0;max-width:100%}
+.form-panel{width:100%;overflow:visible}
+.form-grid{grid-template-columns:repeat(2,minmax(0,1fr));width:100%;}
+.form-grid>.field{min-width:0;width:100%;max-width:100%;overflow:hidden}
+.field input,.field select,.field textarea{display:block;width:100%;min-width:0;max-width:100%;box-sizing:border-box}
+.field input[type="date"]{-webkit-appearance:none;appearance:none;min-width:0;max-width:100%;padding-inline:10px;line-height:normal;color:var(--ink)}
+.field input[type="date"]::-webkit-date-and-time-value{text-align:left;min-width:0}
+.field input[type="date"]::-webkit-calendar-picker-indicator{opacity:.65;margin:0;max-width:22px}
+.field select{padding-right:26px;text-overflow:ellipsis;white-space:nowrap}
+.form-actions{min-width:0}.form-actions .button{min-width:0;white-space:normal}
+@media(max-width:480px){
+ .page{padding-left:16px;padding-right:16px}
+ .topbar{padding-left:16px;padding-right:16px}
+ .form-panel{padding:14px 12px}
+ .form-grid{gap:8px}
+ .form-grid .field label{font-size:12px;line-height:1.25}
+ .form-grid .field input,.form-grid .field select{font-size:16px;padding:10px;min-height:46px}
+ .form-grid .field input[type="date"]{padding-inline:8px;font-size:14px}
+ .form-actions .button{font-size:13px;padding-inline:9px}
+}
+@media(max-width:350px){
+ .form-grid{grid-template-columns:1fr}
+ .form-grid>.field{overflow:visible}
+}

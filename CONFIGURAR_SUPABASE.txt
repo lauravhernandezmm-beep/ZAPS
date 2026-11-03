@@ -67,3 +67,16 @@ DOCUMENTACIÓN OFICIAL
 https://supabase.com/docs/guides/auth/passwords
 https://supabase.com/docs/guides/auth/auth-smtp
 https://supabase.com/docs/guides/database/postgres/row-level-security
+
+
+CONFIGURACIÓN ESPECÍFICA DE GITHUB PAGES PARA LAU
+==============================================
+Site URL (Supabase > Authentication > URL Configuration):
+  https://lauravhernandezmm-beep.github.io/ZAPS/
+Redirect URLs: añadir exactamente:
+  https://lauravhernandezmm-beep.github.io/ZAPS/
+En config.js, siteUrl debe tener esa misma URL, incluyendo /ZAPS/.
+Tras actualizar archivos en GitHub, espera a que termine el despliegue de GitHub Pages.
+ADVERTENCIA: las cuentas locales anteriores NO migran automáticamente al servidor.
+Crea una cuenta NUEVA en Supabase con un correo real para probar.
+El envío de recuperación a usuarios externos requiere SMTP personalizado.
