@@ -270,3 +270,7 @@ html,body{max-width:100%;overflow-x:clip}
  .form-grid{grid-template-columns:1fr}
  .form-grid>.field{overflow:visible}
 }
+
+/* Demo: entrada como invitado */
+.guest-button{color:#416FF0!important;border-color:#416FF0!important;background:#fff!important;}
+.guest-button:hover{background:#F2F4F8!important;transform:translateY(-1px)}

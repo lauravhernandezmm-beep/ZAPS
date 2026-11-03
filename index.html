@@ -6,7 +6,6 @@
   <meta name="theme-color" content="#416ff0">
   <title>ZAPS · Tu universo sneaker</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="config.js" defer></script>
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -19,6 +18,7 @@
           <div class="welcome-actions">
             <button class="button welcome-primary" type="button" data-auth-go="login">Iniciar sesión</button>
             <button class="button secondary" type="button" data-auth-go="register">Registrarse</button>
+            <button class="button secondary guest-button" type="button" data-enter-guest>Entrar como invitado</button>
             <button class="forgot-link" type="button" data-auth-go="recover">¿Has olvidado tu contraseña?</button>
           </div>
         </div>
@@ -38,7 +38,7 @@
             <button type="submit" class="button auth-submit" id="authSubmit">Iniciar sesión</button>
           </form>
           <button class="forgot-link auth-alt" id="authForgotLink" type="button" data-auth-go="recover">¿Has olvidado tu contraseña?</button>
-          <p class="auth-note" id="authNote">Demo local: los usuarios se guardan solo en este navegador.</p>
+          <p class="auth-note" id="authNote">DEMO LOCAL: cuentas guardadas en este navegador. No se envían correos.</p>
         </div>
       </div>
     </div>
